@@ -33,3 +33,22 @@ CONTACT_FROM_EMAIL=ZuriConsult <contact@your-verified-domain.com>
 npm run build
 npm run start
 ```
+
+The build script uses webpack instead of Turbopack because some managed hosting
+environments restrict the worker-process port binding used by Turbopack.
+
+## GoDaddy deployment
+
+Use a GoDaddy hosting plan that supports Node.js applications. Standard static/shared
+hosting cannot run the Next.js server or the contact API route.
+
+1. Connect the Git repository in GoDaddy's Node.js application setup.
+2. Set the Node.js version to `20` or newer.
+3. Set the application start command to `npm run start`.
+4. Set the application port using GoDaddy's provided `PORT` value; `next start` reads it automatically.
+5. Add the variables from `.env.example` in GoDaddy's environment-variable settings.
+6. Deploy and connect the domain to the running Node.js application.
+
+The contact form requires the Resend API key and a verified sending domain. DNS records
+for the sending domain should be configured in Resend, while the website domain can remain
+managed through GoDaddy.
