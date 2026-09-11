@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: white;
+    color: #111827;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .heading-lg {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  @media (min-width: 640px) {
+    .heading-lg {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  .heading-md {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  @media (min-width: 640px) {
+    .heading-md {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .heading-sm {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  @media (min-width: 640px) {
+    .heading-sm {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    background-color: #b45309;
+    color: white;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .btn-primary:hover {
+    background-color: #92400e;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    background-color: #e5e7eb;
+    color: #111827;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .btn-secondary:hover {
+    background-color: #d1d5db;
+  }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .btn-white:hover {
+    background-color: #f9fafb;
+  }
+
+  .section-spacing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-spacing {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    /* Keep the existing utility classes visually consistent with the warm brand palette. */
+    .text-blue-400,
+    .text-blue-600,
+    .text-blue-700 {
+      color: #b45309 !important;
+    }
+
+    .text-blue-100 {
+      color: #fef3c7 !important;
+    }
+
+    .bg-blue-50 {
+      background-color: #fffbeb !important;
+    }
+
+    .bg-blue-600 {
+      background-color: #92400e !important;
+    }
+
+    .bg-blue-400 {
+      background-color: #d97706 !important;
+    }
+
+    .border-blue-100 {
+      border-color: #fde68a !important;
+    }
+
+    .from-blue-50 {
+      --tw-gradient-from: #fffbeb var(--tw-gradient-from-position) !important;
+      --tw-gradient-to: rgb(255 251 235 / 0) var(--tw-gradient-to-position) !important;
+    }
+
+    .to-indigo-50 {
+      --tw-gradient-to: #fef3c7 var(--tw-gradient-to-position) !important;
+    }
+
+    .from-blue-400 {
+      --tw-gradient-from: #f59e0b var(--tw-gradient-from-position) !important;
+      --tw-gradient-to: rgb(245 158 11 / 0) var(--tw-gradient-to-position) !important;
+    }
+
+    .to-blue-600 {
+      --tw-gradient-to: #92400e var(--tw-gradient-to-position) !important;
+    }
+  }
+}
