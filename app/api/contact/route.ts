@@ -18,7 +18,8 @@ export async function POST(request: NextRequest) {
 
     const smtpUser = process.env.SMTP_USER;
     const smtpPassword = process.env.SMTP_PASSWORD;
-    const contactToEmail = process.env.CONTACT_TO_EMAIL || 'info@zurilconsult.com';
+    const contactToEmail =
+      process.env.CONTACT_TO_EMAIL || 'adika.okelo@zuriconsult.com';
 
     if (!smtpUser || !smtpPassword || !contactToEmail) {
       console.error('Contact form email configuration is missing');
