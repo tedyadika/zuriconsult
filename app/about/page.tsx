@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { Users, Globe, Lightbulb } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Zuriconsultant | Data Engineering & Cloud Migration',
+  title: 'About ZuriConsult | PPP & Infrastructure Project Development',
   description:
-    'Zuriconsultant combines data engineering expertise with practical cloud migration delivery.',
+    'Learn how ZuriConsult connects public authorities, project sponsors and investors to develop infrastructure and PPP opportunities in Kenya, East Africa and Europe.',
+  alternates: { canonical: '/about' },
 };
 
 export default function About() {

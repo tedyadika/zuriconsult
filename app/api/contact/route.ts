@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
+
+export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,7 +16,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.RESEND_API_KEY || !process.env.CONTACT_FROM_EMAIL) {
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPassword = process.env.SMTP_PASSWORD;
+    const contactToEmail = process.env.CONTACT_TO_EMAIL || 'info@zurilconsult.com';
+
+    if (!smtpUser || !smtpPassword || !contactToEmail) {
       console.error('Contact form email configuration is missing');
       return NextResponse.json(
         { error: 'Email service is not configured' },
@@ -22,10 +28,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL,
-      to: process.env.CONTACT_TO_EMAIL || 'Adika.okelo@outlook.com',
+    const smtpPort = Number(process.env.SMTP_PORT || 465);
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || 'smtpout.secureserver.net',
+      port: smtpPort,
+      secure: smtpPort === 465,
+      auth: {
+        user: smtpUser,
+        pass: smtpPassword,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.CONTACT_FROM_EMAIL || smtpUser,
+      to: contactToEmail,
       replyTo: email,
       subject: `Website enquiry: ${subject}`,
       text: [
@@ -37,14 +53,6 @@ export async function POST(request: NextRequest) {
         message,
       ].join('\n'),
     });
-
-    if (error) {
-      console.error('Contact form email error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send message' },
-        { status: 502 }
-      );
-    }
 
     return NextResponse.json(
       { success: true, message: 'Message sent' },

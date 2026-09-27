@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: '/services/technology-innovation' },
   title: 'Technology & Innovation | Zuricon Consult',
   description:
     'Digital twins, smart infrastructure, IoT, emerging technologies and innovation strategy.',

@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: '/legal' },
   title: 'Legal Notice & Terms | Zuricon Consult',
   description: 'Legal notice and terms for Zuricon Consult website.',
 };

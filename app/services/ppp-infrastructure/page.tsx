@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'PPP & Infrastructure Advisory | Zuricon Consult',
+  title: 'PPP Advisory in Kenya & East Africa | ZuriConsult',
   description:
-    'Public-private partnership advisory, infrastructure project development, PPP project identification, consortium formation and investment facilitation.',
+    'PPP advisory and infrastructure project development in Kenya and East Africa: project identification, structuring, consortium formation and investor facilitation.',
+  alternates: { canonical: '/services/ppp-infrastructure' },
 };
 
 export default function PPPInfrastructure() {
@@ -19,9 +20,9 @@ export default function PPPInfrastructure() {
             </Link>
             <h1 className="heading-lg mb-6">PPP & Infrastructure Advisory</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Comprehensive support for identifying, structuring and developing
-              public-private partnership and infrastructure projects across Europe and
-              emerging markets.
+              Practical support for identifying, structuring and developing public-private
+              partnership (PPP) and infrastructure investment projects in Kenya and East
+              Africa, connecting local opportunities with international partners.
             </p>
           </div>
         </div>
@@ -132,9 +133,10 @@ export default function PPPInfrastructure() {
             <div className="bg-blue-50 p-8 rounded-lg border border-blue-100">
               <h3 className="heading-sm mb-4">Geographic Focus</h3>
               <p className="text-gray-700 leading-relaxed">
-                We work with European and emerging market partners to identify opportunities
-                that benefit from cross-border expertise, investment and technology. Our
-                network spans Slovakia, EU institutions, Kenya and East Africa.
+                We work with public authorities, project sponsors and international partners
+                to develop infrastructure and PPP opportunities in Kenya and East Africa,
+                drawing on cross-border expertise, investment and technology from Slovakia,
+                the EU and beyond.
               </p>
             </div>
           </div>

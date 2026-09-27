@@ -13,19 +13,23 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Contact form email
 
-The contact form sends submissions through [Resend](https://resend.com). Before deploying:
+The contact form sends submissions through GoDaddy's authenticated SMTP service. Before deploying:
 
-1. Create a Resend API key.
-2. Verify the sending domain you will use.
-3. Add these environment variables in your hosting provider:
+1. Use the full GoDaddy mailbox address and its mailbox password.
+2. Add these environment variables in your hosting provider:
 
 ```env
-RESEND_API_KEY=re_your_api_key
-CONTACT_TO_EMAIL=Adika.okelo@outlook.com
-CONTACT_FROM_EMAIL=ZuriConsult <contact@your-verified-domain.com>
+SMTP_HOST=smtpout.secureserver.net
+SMTP_PORT=465
+SMTP_USER=your-go-daddy-email@your-domain.com
+SMTP_PASSWORD=your-go-daddy-email-password
+CONTACT_TO_EMAIL=info@zurilconsult.com
+CONTACT_FROM_EMAIL=your-go-daddy-email@your-domain.com
 ```
 
-`CONTACT_FROM_EMAIL` must use the verified sending domain. Keep the API key in your hosting provider's secret environment variables and never commit `.env.local`.
+Use port `587` instead of `465` if your GoDaddy account requires STARTTLS. Keep
+`SMTP_PASSWORD` in your hosting provider's secret environment variables and never
+commit `.env.local`.
 
 ## Production
 
@@ -49,6 +53,6 @@ hosting cannot run the Next.js server or the contact API route.
 5. Add the variables from `.env.example` in GoDaddy's environment-variable settings.
 6. Deploy and connect the domain to the running Node.js application.
 
-The contact form requires the Resend API key and a verified sending domain. DNS records
-for the sending domain should be configured in Resend, while the website domain can remain
-managed through GoDaddy.
+The contact form requires the GoDaddy mailbox credentials. The sender and recipient
+should normally be the same GoDaddy mailbox; visitor replies are routed to the
+visitor's address through `replyTo`.

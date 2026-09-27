@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: '/legal/privacy' },
   title: 'Privacy Policy | Zuricon Consult',
   description: 'Privacy policy for Zuricon Consult website.',
 };

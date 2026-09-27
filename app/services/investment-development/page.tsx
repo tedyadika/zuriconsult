@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Investment & Project Development | Zuricon Consult',
+  title: 'Investment & Project Development in Africa | ZuriConsult',
   description:
-    'Investment opportunity identification, project origination, investment facilitation, market-entry support and strategic partnership.',
+    'Investment and project development in Kenya and East Africa, including opportunity identification, investor facilitation, project structuring and cross-border partnerships.',
+  alternates: { canonical: '/services/investment-development' },
 };
 
 export default function InvestmentDevelopment() {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: '/services/it-digital' },
   title: 'IT & Digital Transformation | Zuricon Consult',
   description:
     'Digital transformation, IT consulting, data engineering, business intelligence, process automation and enterprise platforms.',

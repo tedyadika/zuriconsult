@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: '/services/ai-ml' },
   title: 'AI & Machine Learning | Zuricon Consult',
   description:
     'AI strategy, machine learning solutions, predictive analytics, AI automation and intelligent business processes.',

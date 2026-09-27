@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: '/services/cloud-azure' },
   title: 'Cloud Migration: Azure & AWS | Zuriconsultant',
   description:
     'Data engineering and cloud migration across Databricks, Microsoft Azure and AWS.',

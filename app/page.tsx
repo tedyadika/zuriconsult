@@ -10,6 +10,13 @@ import {
   Target,
 } from 'lucide-react';
 
+export const metadata = {
+  title: 'PPP & Infrastructure Investment in Kenya and Africa | ZuriConsult',
+  description:
+    'ZuriConsult develops public-private partnerships (PPPs), infrastructure projects and investment opportunities in Kenya and East Africa, connecting public authorities and project sponsors with international investors and delivery partners.',
+  alternates: { canonical: '/' },
+};
+
 const projectJourney = [
   {
     number: '01',
@@ -91,9 +98,10 @@ export default function Home() {
               Turning Infrastructure Opportunities Into Investable Projects
             </h1>
             <p className="mt-8 max-w-3xl text-xl leading-relaxed text-stone-200 sm:text-2xl">
-              We identify, develop and help deliver infrastructure projects by connecting
-              public authorities and project sponsors with private capital, technical
-              partners, EPC contractors, technology providers and international financing.
+              We develop public-private partnerships (PPPs) and infrastructure investment
+              opportunities in Kenya and East Africa, connecting public authorities and
+              project sponsors with international investors, private capital, technical
+              partners and delivery expertise.
             </p>
             <p className="mt-6 text-lg font-semibold text-amber-200">
               From project identification to project delivery.
